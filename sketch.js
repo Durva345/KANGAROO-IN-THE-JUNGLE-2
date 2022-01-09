@@ -71,7 +71,7 @@ function draw() {
    
   if (gameState===PLAY){
 
-    jungle.velocityX=-3
+    jungle.velocityX=-5
 
     if(jungle.x<100)
     {
@@ -154,7 +154,7 @@ function spawnShrubs() {
 
     var shrub = createSprite(camera.position.x+500,330,40,10);
 
-    shrub.velocityX = -(10 + 3*score/100)
+    shrub.velocityX = -(3 + 3*score/100)
     shrub.scale = 0.6;
 
     var rand = Math.round(random(1,3));
@@ -184,7 +184,7 @@ function spawnObstacles() {
     var obstacle = createSprite(camera.position.x+400,330,40,40);
     obstacle.setCollider("rectangle",0,0,200,200)
     obstacle.addImage(obstacle1);
-    obstacle.velocityX = -(10 + 3*score/100)
+    obstacle.velocityX = -(3 + 3*score/100)
     obstacle.scale = 0.15;      
 
     obstacle.lifetime = 400;

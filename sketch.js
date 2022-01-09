@@ -80,7 +80,7 @@ function draw() {
    console.log(kangaroo.y)
     if(keyDown("space")&& kangaroo.y>270) {
       jumpSound.play();
-      kangaroo.velocityY = -16;
+      kangaroo.velocityY = -20;
     }
   
     kangaroo.velocityY = kangaroo.velocityY + 0.8
@@ -154,7 +154,7 @@ function spawnShrubs() {
 
     var shrub = createSprite(camera.position.x+500,330,40,10);
 
-    shrub.velocityX = -(6 + 3*score/100)
+    shrub.velocityX = -(10 + 3*score/100)
     shrub.scale = 0.6;
 
     var rand = Math.round(random(1,3));
@@ -184,7 +184,7 @@ function spawnObstacles() {
     var obstacle = createSprite(camera.position.x+400,330,40,40);
     obstacle.setCollider("rectangle",0,0,200,200)
     obstacle.addImage(obstacle1);
-    obstacle.velocityX = -(6 + 3*score/100)
+    obstacle.velocityX = -(10 + 3*score/100)
     obstacle.scale = 0.15;      
 
     obstacle.lifetime = 400;
